@@ -6,7 +6,7 @@ let j;
 let num = [];
 let sum = 0;
 let sumEvenNumber = 0;
-let naturalNum = 50;
+let naturalNum = 81;
 let output = 0;
 let sumNum = 0; 
 let result = 'x ';
@@ -24,11 +24,9 @@ for(let i in arr) {
 console.log(arr.join(', '));
 
 //Вивести таблицю множення на 7.
-for (let i = 0; i < 10; i++) {
-    i++;
+for (let i = 0; i <= 10; i++) {
     sum = table * i;
     console.log(`${table} * ${i} = ${sum}`);
-    i--;
 }
 
 //Знайти суму всіх цілих чисел від 1 до 15.
@@ -55,7 +53,7 @@ console.log(`${sumElements}`);
 //Вивести суму лише парних чисел в діапазоні від 30 до 80.
 for(let i = 30; i <= 80; i++){
     if(i % 2 == 0){
-        sumEvenNumber = sumEvenNumber + i;
+        sumEvenNumber += i;
     }
 }
 console.log(`${sumEvenNumber}`);
@@ -76,14 +74,15 @@ for (i = 1; i <= naturalNum; i++) {
 
 //Визначити кількість його парних дільників. 
 for (let i = 1; i <= naturalNum; i++) 
-    if (naturalNum % i === 0) {
+    if (i % 2 == 0) {
     output += 1; 
 }
 console.log(`${output}`);
 
+
 //Знайти суму його парних дільників.
-for (let i = 1; i <= naturalNum; i++) {
-    sumNum = naturalNum + i;
+for (let i = 1; i <= output; i++) {
+    sumNum = output * 2;
 }
 console.log(`${sumNum}`);
 
@@ -93,13 +92,13 @@ for (let i = 0; i <= 10; i++) {
     for (let f = 0; f <= 10; f++) {
 
         if(i == 0 && f > 0){
-          result += '| ' + f + ' |';
+            result += '| ' + f + ' |';
         } 
         else if(f == 0 && i > 0){
-          result += '|' + i + ' | ';
+            result += '|' + i + ' | ';
         } 
         else if(i > 0 && f > 0){
-        result += (i * f) + '    ';
+            result += (i * f) + '    ';
         }
     }
     result += '\n';
