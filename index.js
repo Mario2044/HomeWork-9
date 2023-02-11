@@ -10,6 +10,7 @@ let naturalNum = 81;
 let output = 0;
 let sumNum = 0; 
 let result = 'x ';
+let res = 1;
 
 //Вивести на сторінку в один рядок через кому числа від 10 до 20.
 for(let i = 10; i <= 20; i++) {
@@ -73,18 +74,20 @@ for (i = 1; i <= naturalNum; i++) {
 }
 
 //Визначити кількість його парних дільників. 
-for (let i = 1; i <= naturalNum; i++) 
-    if (i % 2 == 0) {
-    output += 1; 
+for(let i = 1; i <= naturalNum / 2; i++) {
+    if (naturalNum % i === 0) {
+        res++;
+    } 
 }
-console.log(`${output}`);
-
+console.log(`${res}`);
 
 //Знайти суму його парних дільників.
-for (let i = 1; i <= output; i++) {
-    sumNum = output * 2;
-}
-console.log(`${sumNum}`);
+for (var i = 1; i <= naturalNum; i++){
+    if (!(naturalNum % i)) {
+      sumNum += i;
+    }
+  }
+  console.log(`${sumNum}`);
 
 //Надрукувати повну таблицю множення від 1 до 10.
 for (let i = 0; i <= 10; i++) {
