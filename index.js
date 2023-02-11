@@ -86,8 +86,8 @@ for (var i = 1; i <= naturalNum; i++){
     if (!(naturalNum % i)) {
       sumNum += i;
     }
-  }
-  console.log(`${sumNum}`);
+}
+console.log(`${sumNum}`);
 
 //Надрукувати повну таблицю множення від 1 до 10.
 for (let i = 0; i <= 10; i++) {
