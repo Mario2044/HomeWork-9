@@ -74,20 +74,25 @@ for (i = 1; i <= naturalNum; i++) {
 }
 
 //Визначити кількість його парних дільників. 
-for(let i = 1; i <= naturalNum / 2; i++) {
-    if (naturalNum % i === 0) {
-        res++;
-    } 
+let count = 0;
+for (let i = 1; i <= naturalNum; i++) {
+  if (naturalNum % i === 0) {
+    let pairedDivisor = naturalNum / i;
+    if (naturalNum % pairedDivisor === 0) {
+      count++;
+    }
+  }
 }
-console.log(`${res}`);
+console.log(`${count}`);
 
 //Знайти суму його парних дільників.
-for (var i = 1; i <= naturalNum; i++){
-    if (!(naturalNum % i)) {
-      sumNum += i;
+let summa = 0;
+  for (let i = 1; i <= naturalNum; i++) {
+    if (naturalNum % i === 0) {
+      summa += i;
     }
 }
-console.log(`${sumNum}`);
+console.log(`${summa}`);
 
 //Надрукувати повну таблицю множення від 1 до 10.
 for (let i = 0; i <= 10; i++) {
